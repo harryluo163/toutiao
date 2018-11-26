@@ -13,7 +13,11 @@
         overflow-x: auto;
         overflow-y: auto;
 }
-
+.height300 {
+	height: 300px;
+	overflow-x: auto;
+	overflow-y: auto;
+}
 .height400 {
         height: 400px;
         overflow-x: auto;
