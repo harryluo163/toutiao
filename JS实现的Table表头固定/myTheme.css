@@ -1,0 +1,63 @@
+.divider {
+	margin-top: 40px;
+	}
+
+
+.myTableWrapper {
+	width: 800px;
+	height: 500px;
+	}
+
+.height250 {
+        height: 250px;
+        overflow-x: auto;
+        overflow-y: auto;
+}
+
+.height400 {
+        height: 400px;
+        overflow-x: auto;
+        overflow-y: auto;
+}
+
+.fancyTable td, .fancyTable th {
+	/* appearance */
+	border: 1px solid #778899;
+
+	/* size */
+	padding: 5px;
+	}
+
+.fancyTable {
+	/* text */
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+
+.fancyTable tbody tr td {
+	/* appearance */
+	background-color: #eef2f9;
+	/* text */
+	color: #262c31;
+	font-size: 11px;
+	}
+
+.fancyTable tbody tr.odd td {
+	/* appearance */
+	background-color: #d6e0ef;
+}
+
+.fancyTable thead tr th,
+.fancyTable thead tr td,
+.fancyTable tfoot tr th,
+.fancyTable tfoot tr td {
+	/* appearance */
+	background-color: #8ca9cf;
+	/* text */
+	color: #121517;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #e8ebee;
+	}
+th{
+	white-space:nowrap;
+}
