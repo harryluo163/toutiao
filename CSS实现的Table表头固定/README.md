@@ -1,2 +1,2 @@
-[源代码下载](https://github.com/harryluo163/toutiao/tree/master/CSS%E5%AE%9E%E7%8E%B0%E7%9A%84Table%E8%A1%A8%E5%A4%B4%E5%9B%BA%E5%AE%9A)
-[演示地址](http://47.105.36.188:3030/toutiao/CSS%E5%AE%9E%E7%8E%B0%E7%9A%84Table%E8%A1%A8%E5%A4%B4%E5%9B%BA%E5%AE%9A/index.html)
+[源代码下载](https://github.com/harryluo163/toutiao/tree/master/CSS实现的Table表头固定)
+[演示地址](http://47.105.36.188:3030/toutiao/CSS实现的Table表头固定/index.html)
