@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>活动</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="http://www.jq22.com/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="music" class="music">
+    <audio id="music-audio" class="audio" src="mp3/music_mid.mp3" loop="loop" preload>
+    </audio>
+    <div class="control">
+        <div class="control-after"></div>
+    </div>
+</div>
+<div class="swiper-container" id="swiper-container-v">
+
+    <section class="poster_wrap load" id="load">
+        <div class="p_loading">
+            <div class="p_loading_logo"></div>
+            <p class="p_loading_tip">加载页</p>
+        </div>
+    </section>
+    <div class="swiper-wrapper">
+        <!-------------slide1----------------->
+        <section class="swiper-slide swiper-slide1 swiper-slide-v">
+            <div class="index-top ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s">
+                <h1>这是第一页</h1>
+            </div>
+        </section>
+
+        <!-------------slide2----------------->
+        <section class="swiper-slide swiper-slide2 swiper-slide-v">
+            <h1 class="posit_tit"><i class="about_us_tit_ico"></i>这是第二页</h1>
+            <div class="swiper-container ani" id="swiper-container-h" swiper-animate-effect="rotateInUpLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="posit_details_head">
+                            <h3 class="posit_details_tit">第二页中的第1页</h3>
+
+                        </div>
+                        <div class="job_details">
+                            <span class="job_address">page1</span>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <div class="posit_details_head">
+                            <h3 class="posit_details_tit">第二页中的第2页</h3>
+
+                        </div>
+                        <div class="job_details">
+                            <span class="job_address">page2</span>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <div class="posit_details_head">
+                            <h3 class="posit_details_tit">第二页中的第3页</h3>
+
+                        </div>
+                        <div class="job_details">
+                            <span class="job_address">page3</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+    <!--向上箭头-->
+    <div class="arrow-box">
+        <img src="images/arrow.png" id="array">
+    </div>
+    <!--右边导航原点-->
+    <div class="swiper-pagination"></div>
+</div>
+
+<script>
+    $(function () {
+        setTimeout(function () {
+            document.getElementById("load").style.display = "none"
+            new Swiper("#swiper-container-h", {
+                slidesPerView: "auto",
+                centeredSlides: !0,
+                spaceBetween: 15
+            })
+            new Swiper("#swiper-container-v", {
+                speed: 500, direction: "vertical", pagination: ".swiper-pagination", mousewheelControl: !0,
+                onInit: function (swiper) {
+                    swiperAnimateCache(swiper); //隐藏动画元素
+                    swiperAnimate(swiper); //初始化完成开始动画
+                },
+                onSlideChangeEnd: function(swiper){
+                    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                }
+            })
+        }, 1000)
+        //微信中的音乐开关
+        audioAutoPlay('music-audio');
+        $('#music').on('click', function () {
+            var player = $("#music-audio")[0];
+            /*jquery对象转换成js对象*/
+
+            if (player.paused) { /*如果已经暂停*/
+                player.play();
+                /*播放*/
+                $(this).removeClass('stopped')
+            } else {
+                player.pause();
+                /*暂停*/
+                $(this).addClass('stopped')
+            }
+        });
+
+    })
+
+    function audioAutoPlay(id) {
+        var audio = document.getElementById(id);
+        audio.play();
+        document.addEventListener('WeixinJSBridgeReady', function () {
+            audio.play();
+        }, false);
+    }
+
+</script>
+<script>
+
+</script>
+<!--切换效果采用Swiper，更多Swiper应用敬请关注Swiper中文网-->
+</body>
+</html>
