@@ -1,0 +1,231 @@
+/**
+ * @author Jannchie
+ * @email jannchie@gmail.com
+ * @create date 2018-05-03 08:44:46
+ * @modify date 2018-10-14 20:24:28
+ * @desc [description]
+*/
+body {
+    margin: 0 auto;
+    max-width: 750px;
+    background: #f8f8f8;
+}
+h3{
+    text-align: center;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+}
+input {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+.domain {
+    display: none;
+}
+
+.tick line {
+    stroke: #C0C0BB;
+}
+
+.tick text {
+    fill: #8E8883;
+    font-size: 14px;
+
+}
+
+.label {
+    fill: rgb(92, 92, 92);
+    font-size: 14px;
+
+    font-weight: bold
+}
+
+.dateLabel {
+    fill: rgb(92, 92, 92);
+    display:table-cell;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+.dateLabelRed {
+
+    fill: rgb(167, 46, 46);
+    display:table-cell;
+    font-size: 90pt;
+    font-weight: bold;
+
+}
+
+.days {
+    fill: rgb(92, 92, 92);
+    font-weight: bold;
+    font-size: 55pt;
+
+}
+
+.topLabel {
+    fill: rgb(92, 92, 92);
+    font-weight: bold;
+    font-size: 40pt;
+
+}
+
+.top {
+    fill: rgb(92, 92, 92);
+    font-weight: bold;
+    font-size: 62pt;
+
+}
+
+.value {
+    fill: rgb(138, 46, 46);
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+.barInfo {
+    fill: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.axis-label {
+    fill: #635F5D;
+    font-size: 32pt;
+
+}
+
+.days {
+    fill: rgb(92, 92, 92);
+    font-weight: bold;
+    font-size: 40pt;
+
+}
+
+.dayslabel {
+    fill: rgb(92, 92, 92);
+    font-weight: bold;
+    font-size: 25pt;
+
+}
+
+.growth {
+    fill: rgb(92, 92, 92);
+    font-weight: bold;
+    font-size: 40pt;
+
+}
+/* MIKU色 */
+.L {
+    fill: #39C5BB
+}
+
+/* 龙牙绿 */
+.M {
+    fill: #006666
+}
+
+.L {
+    fill: #66CCFF
+}
+
+.N {
+    fill: rgb(235, 0, 0)
+}
+
+.O {
+    fill: #009714
+}
+
+.P {
+    fill: #b11111
+}
+
+.Q {
+    fill: #e24000
+}
+
+.R {
+    fill: #8605d1
+}
+
+.S {
+    fill: #00a5bb
+}
+
+.T {
+    fill: #c21178
+}
+
+.U {
+    fill: #00a048
+}
+
+.W {
+    fill: #ffc012
+}
+
+.V {
+    fill: #f39303
+}
+
+.X {
+    fill: #933dda
+}
+
+.Y {
+    fill: #ee5677
+}
+
+.Z {
+    fill: #c0620b
+}
+
+.H {
+    fill: #787878
+}
+
+.G {
+    fill: #CB1B45
+}
+
+.K {
+    fill: #07bebe
+}
+
+.J {
+    fill: rgb(180, 157, 51)
+}
+
+.I {
+    fill: #1B813E
+}
+
+.F {
+    fill: rgb(221, 50, 135)
+}
+
+.E {
+    fill: rgb(0, 175, 137)
+}
+
+.D {
+    fill: #0F2540
+}
+
+.C {
+    fill: #2EA9DF
+}
+
+.B {
+    fill: rgb(10, 131, 230)
+}
+
+.A {
+    fill: #cf9237
+}
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.js"></script>
+
+</head>
+<body>
+<div id="main" style="width: 600px;height:400px;"></div>
+
+
+</body>
+
+<script>
+    var i = 0;
+    myChart = echarts.init(document.getElementById('main'));
+    var data =[{
+        categories: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
+        data: [88, 87, 86, 85, 84, 83]
+    },{
+        categories: ["羊毛衫","衬衫","雪纺衫","裤子","高跟鞋","袜子"],
+        data:  [99, 90, 86, 85, 84, 83]
+    },{
+        categories: ["袜子","羊毛衫","雪纺衫","裤子","高跟鞋","衬衫"],
+        data:  [100, 98, 86, 85, 84, 83]
+    },{
+        categories: ["裤子","羊毛衫","雪纺衫","袜子","高跟鞋","衬衫"],
+        data:  [110, 100, 86, 85, 84, 83]
+    },{
+        categories: ["羊毛衫","衬衫","雪纺衫","裤子","高跟鞋","袜子"],
+        data:  [99, 90, 86, 85, 84, 83]
+    },{
+        categories: ["袜子","羊毛衫","雪纺衫","裤子","高跟鞋","衬衫"],
+        data:  [100, 98, 86, 85, 84, 83]
+    },{
+        categories: ["裤子","羊毛衫","雪纺衫","袜子","高跟鞋","衬衫"],
+        data:  [110, 100, 86, 85, 84, 83]
+    },{
+        categories: ["羊毛衫","衬衫","雪纺衫","裤子","高跟鞋","袜子"],
+        data:  [99, 90, 86, 85, 84, 83]
+    },{
+        categories: ["袜子","羊毛衫","雪纺衫","裤子","高跟鞋","衬衫"],
+        data:  [100, 98, 86, 85, 84, 83]
+    },{
+        categories: ["裤子","羊毛衫","雪纺衫","袜子","高跟鞋","衬衫"],
+        data:  [110, 100, 86, 85, 84, 83]
+    },{
+        categories: ["羊毛衫","衬衫","雪纺衫","裤子","高跟鞋","袜子"],
+        data:  [99, 90, 86, 85, 84, 83]
+    },{
+        categories: ["袜子","羊毛衫","雪纺衫","裤子","高跟鞋","衬衫"],
+        data:  [100, 98, 86, 85, 84, 83]
+    },{
+        categories: ["裤子","羊毛衫","雪纺衫","袜子","高跟鞋","衬衫"],
+        data:  [110, 100, 86, 85, 84, 83]
+    },{
+        categories: ["羊毛衫","衬衫","雪纺衫","裤子","高跟鞋","袜子"],
+        data:  [99, 90, 86, 85, 84, 83]
+    },{
+        categories: ["袜子","羊毛衫","雪纺衫","裤子","高跟鞋","衬衫"],
+        data:  [100, 98, 86, 85, 84, 83]
+    },{
+        categories: ["裤子","羊毛衫","雪纺衫","袜子","高跟鞋","衬衫"],
+        data:  [110, 100, 86, 85, 84, 83]
+    },{
+        categories: ["羊毛衫","衬衫","雪纺衫","裤子","高跟鞋","袜子"],
+        data:  [99, 90, 86, 85, 84, 83]
+    },{
+        categories: ["袜子","羊毛衫","雪纺衫","裤子","高跟鞋","衬衫"],
+        data:  [100, 98, 86, 85, 84, 83]
+    },{
+        categories: ["裤子","羊毛衫","雪纺衫","袜子","高跟鞋","衬衫"],
+        data:  [110, 100, 86, 85, 84, 83]
+    },{
+        categories: ["羊毛衫","衬衫","雪纺衫","裤子","高跟鞋","袜子"],
+        data:  [99, 90, 86, 85, 84, 83]
+    },{
+        categories: ["袜子","羊毛衫","雪纺衫","裤子","高跟鞋","衬衫"],
+        data:  [100, 98, 86, 85, 84, 83]
+    },{
+        categories: ["裤子","羊毛衫","雪纺衫","袜子","高跟鞋","衬衫"],
+        data:  [110, 100, 86, 85, 84, 83]
+    }]
+    // 初始 option
+    option = {
+        title: {
+            text: '异步数据加载示例'
+        },
+        tooltip: {},
+        legend: {
+            data:['销量']
+        },
+        xAxis: {
+            silent:true
+        },
+        yAxis: {
+            data: [],
+
+        },
+        animationEasing: 'elasticOut',
+        animationDurationUpdate: function (idx) {
+            // 越往后的数据延迟越大
+            return  1600;
+        },
+        series: [{
+            name: '销量',
+            type: 'bar',
+            data: [],
+            animationDelay: function (idx) {
+                return idx * 10;
+            },
+            animationDuration: 1000
+        }]
+    };
+    myChart.hi
+    myChart.setOption(option)
+
+    $(function () {
+        fetchData(function (data) {
+            i++;
+            myChart.setOption({
+                yAxis: {
+                    data: data.categories.reverse()
+
+                },
+                series: [{
+                    // 根据名字对应到相应的系列
+                    name: '销量',
+                    data: data.data.reverse(),
+                    label:{
+                        show:true
+                    }
+                }]
+            });
+        });
+    })
+
+    function fetchData(cb) {
+
+        // 通过 setTimeout 模拟异步加载
+        var inter=   setInterval(function () {
+            if(i>=data.length){
+                window.clearInterval(inter);
+            }else {
+                cb(data[i]);
+
+            }
+
+        }, 2000);
+    }
+</script>
+</html>
