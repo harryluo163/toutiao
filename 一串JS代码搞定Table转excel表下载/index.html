@@ -1,0 +1,79 @@
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <title>一串JS代码搞定Table转excel表下载</title>
+    <style>
+        body{font-family:Arial; font-size:14px;line-height:180%;padding-top: 20px;} /*总控制，可忽略此行*/
+        table tr:first-child{background:#0066CC; color:#fff;font-weight:bold;} /*第一行标题蓝色背景*/
+        table{border-top:1pt solid #C1DAD7;border-left:1pt solid #C1DAD7;margin: 0 auto;}
+        td{ padding:5px 10px; text-align:center;border-right:1pt solid #C1DAD7;border-bottom:1pt solid #C1DAD7;}
+        tr:nth-of-type(odd){ background:#c6f9f7} /* odd 标识奇数行，even标识偶数行 */
+        tr:hover{ background: #E0F0F0;} /*鼠标悬停后表格背景颜色*/
+    </style>
+    <script src="http://www.jq22.com/jquery/1.7.2/jquery.min.js"></script>
+    <script src="tableExporter.js"></script>
+</head>
+<body>
+    <p><input type="button" value="下载" onclick="_downData()" ></p>
+<table class="dataTable" width='600' border='0' cellspacing='0' cellpadding='0' align='center'>
+    <tr>
+        <td>姓名</td>
+        <td>测试1</td>
+        <td>测试2</td>
+        <td>测试3</td>
+        <td>测试4</td>
+    </tr>
+    <tr>
+        <td>USERS</td>
+        <td>32767.98</td>
+        <td>4</td>
+        <td>32763.98</td>
+        <td>.01</td>
+    </tr>
+    <tr>
+        <td>UNDOTBS1</td>
+        <td>32767.98</td>
+        <td>13.56</td>
+        <td>32754.42</td>
+        <td>.04</td>
+    </tr>
+    <tr>
+        <td>REGISTRATION</td>
+        <td>120</td>
+        <td>.06</td>
+        <td>119.94</td>
+        <td>.05</td>
+    </tr>
+    <tr>
+        <td>TANG</td>
+        <td>70</td>
+        <td>.13</td>
+        <td>69.88</td>
+        <td>.18</td>
+    </tr>
+    <tr>
+        <td>EXAMPLE</td>
+        <td>32767.98</td>
+        <td>68.25</td>
+        <td>32699.73</td>
+        <td>.21</td>
+    </tr>
+    <tr>
+        <td>TBS</td>
+        <td>32767.98</td>
+        <td>.56</td>
+        <td>32767.42</td>
+        <td>0</td>
+    </tr>
+</table>
+</div>
+<script>
+    // excel下载
+    function _downData() {
+        $('.dataTable').tableExport({fileName: '测试表', type: 'excel', escape: 'false'});
+    }
+</script>
+</body>
+</html>
